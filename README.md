@@ -1,10 +1,20 @@
 # MIDI BOARD TWO
 
 ## Second MIDI-Board-Project with SD-Card-Reader and LCD-Display!
- 
-### Testing Tool
 
-This tool is only a testing tool. If you upload it to your Arduino Device, all LEDs will be switched on. After it, you can
-switch out all the LEDs if you press all your Buttons.
+### Directory Structure
 
-Only for testing your circuit.
+There are some differnent directories in the repository.
+
+
+* doc
+
+Here you can find some documentary about the project.
+
+* tools
+
+There are some testing-tools for testing the functionality of your board.
+
+* main
+
+In this folder you can find the main program - the firmware - for your MIDI-Board.
