@@ -35,7 +35,7 @@
 // LED und Switch Pins
 #define SWT_MAX 23          // How many switches (and LEDs) does your MIDI-Board have?
 
-#define SWT01 2
+#define SWT01 2            // BTNLED 1
 #define LED01 3
 #define SWT02 4
 #define LED02 5
@@ -48,30 +48,30 @@
 #define SWT06 12
 #define LED06 13
 
-#define SWT07 22
-#define LED07 24
-#define SWT08 26
-#define LED08 28
-#define SWT09 30
-#define LED09 32
-#define SWT10 34
-#define LED10 36
-#define SWT11 38
-#define LED11 40
+#define SWT07 23            // BTNLED2
+#define LED07 25
+#define SWT08 27
+#define LED08 29
+#define SWT09 31
+#define LED09 33
+#define SWT10 35
+#define LED10 37
+#define SWT11 39
+#define LED11 41
 
-#define SWT12 23
-#define LED12 25
-#define SWT13 27
-#define LED13 29
-#define SWT14 31
-#define LED14 33
-#define SWT15 35
-#define LED15 37
-#define SWT16 39
-#define LED16 41
+#define SWT12 22            // BTNLED4
+#define LED12 24
+#define SWT13 26
+#define LED13 28
+#define SWT14 30
+#define LED14 32
+#define SWT15 34
+#define LED15 36
+#define SWT16 38
+#define LED16 40
 
-#define SWT17 42
-#define LED17 43
+#define SWT17 43            // Analog2
+#define LED17 42
 #define SWT18 A8
 #define LED18 A9
 #define SWT19 A10
@@ -81,10 +81,10 @@
 #define SWT21 A14
 #define LED21 A15
 
-#define SWT22 A6
+#define SWT22 A6            // Analog 1
 #define LED22 A7
-#define SWT23 14
-#define LED23 15
+#define SWT23 20
+#define LED23 21
 
 #define SWT24 16
 #define LED24 17

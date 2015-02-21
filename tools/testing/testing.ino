@@ -32,6 +32,7 @@ byte led_pins[SWT_MAX] = { LED01, LED02, LED03, LED04, LED05, LED06, LED07, LED0
                           LED11, LED12, LED13, LED14, LED15, LED16, LED17, LED18, LED19, LED20,
                           LED21, LED22, LED23 };    // LED24, LED25, LED26, LED27, LED28
 
+byte lay_led[4]        = { LAY_LED01, LAY_LED02, LAY_LED03, LAY_LED04 };
 
     
 /**
@@ -50,14 +51,29 @@ void setup() {
   #endif
   
   printInfo("Initialisation...");
-  
+  delay(100);
   
   // Setting Pin-Modes
   for(byte i=0; i < SWT_MAX; i=i+1) {
     pinMode(swt_pins[i], INPUT_PULLUP);
     pinMode(led_pins[i], OUTPUT);
+    digitalWrite(led_pins[i], LOW);
   }
   
+  pinMode(LAY_LED01, OUTPUT);
+  pinMode(LAY_LED02, OUTPUT);
+  pinMode(LAY_LED03, OUTPUT);
+  pinMode(LAY_LED04, OUTPUT);
+
+ 
+  
+  for(byte i=0; i < 4; i++) {
+    digitalWrite(lay_led[i], HIGH);   // turn the LED on (HIGH is the voltage level)
+    delay(300);               // wait for a second
+//    digitalWrite(lay_led[i], LOW);   // turn the LED off by making the voltage LOW
+    delay(100);
+  }
+ 
   
   // Turn LED on, then off
   for(byte i=0; i < SWT_MAX; i=i+1) {
@@ -68,6 +84,7 @@ void setup() {
     digitalWrite(led_pins[i], LOW);   // turn the LED off by making the voltage LOW
     delay(100);
   }
+ 
 }
 
 
@@ -85,7 +102,7 @@ void loop() {
     digitalWrite(led_pins[i], !actState);
     
     if(!actState) {
-      printInfo("Switch " + String(i+1) + " pressed!");
+      printInfo("SWT " + String(i+1) + " pressed!");
     }
   }
 }
@@ -100,6 +117,7 @@ void printInfo(String infoText) {
   Serial.println(infoText);  
   
   #if USE_LCD==1
+  lcd.clear();
     lcd.print(infoText);
   #endif
 }
